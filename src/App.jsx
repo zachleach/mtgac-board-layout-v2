@@ -63,6 +63,13 @@ const AndrewGioia = ({ tailwind, scale_factor }) => {
 
 
 
+/**
+ * TODO: 
+ * refactor power, toughness, mana symbols, and abilitiy icons to be pulled from scryfall data (combine props into a card_info object prop)
+ * refactor mana symbols to only be displayed when card is in-hand
+ *
+ *
+ */
 const Card = ({ img_url = card_url, abilities, power, toughness, mana }) => {
 
 	const ref = useRef(null)
@@ -90,9 +97,6 @@ const Card = ({ img_url = card_url, abilities, power, toughness, mana }) => {
 		}
 
 	}, [])
-
-
-
 
 
 	const container_style = {
@@ -123,20 +127,16 @@ const Card = ({ img_url = card_url, abilities, power, toughness, mana }) => {
 		alignItems: 'flex-start',
 	}
 
-	/**
-	 * TODO: 
-	 * refactor mana symbols to only render for cards in-hand
-	 * refactor 
-	 */
 	return (
 		<div ref={ref} style={container_style}>
 			<img style={card_image_style}
 				src={img_url}
 			/>
 
+			{/* https://mana.andrewgioia.com/attributes.html */}
 			<div style={{ display: 'flex', position: 'absolute', top: '-3%', right: '-4.5%', gap: '2%'}}>
-				<AndrewGioia scale_factor={card_width} tailwind={'ms ability-infect'}/>
-				<AndrewGioia scale_factor={card_width} tailwind={'ms ms-r ms-cost ms-shadow'}/>
+				<AndrewGioia scale_factor={card_width} tailwind={'ms ms-wu ms-cost ms-shadow'}/>
+				<AndrewGioia scale_factor={card_width} tailwind={'ms ms-2b ms-cost ms-shadow'}/>
 				<AndrewGioia scale_factor={card_width} tailwind={'ms ms-u ms-cost ms-shadow'}/>
 			</div>
 
@@ -181,7 +181,7 @@ const AbilityIcon = ({ svg_url }) => {
 
 
 
-const PlayerBoard = ({ height_p }) => {
+const PlayerBoard = ({ height_p, icon_src }) => {
 
 	const container_style = {
 		border: '1px solid green',
@@ -197,7 +197,7 @@ const PlayerBoard = ({ height_p }) => {
 
 			<div style={{ display: 'flex', height: "33.3%", flexDirection: 'row' }}>
 				<Row height_p={"100%"}/>
-				<PlayerIcon />
+				<PlayerIcon icon_src={icon_src}/>
 				<Row height_p={"100%"}/>
 			</div>
 
@@ -220,35 +220,49 @@ const PlayerBoard = ({ height_p }) => {
 }
 
 
-const LibraryGraveyardExile = ({ height_p = '100%', width_p = '100%' }) => {
-	const container_style = {
-		border: '1px solid red',
-		overflow: 'hidden',
-		width: width_p,
-		height: height_p,
-		display: 'flex',
-		alignItems: 'center',
-		justifyContent: 'center',
+
+const PlayerIcon = ({ health = "20", icon_src }) => {
+
+	const ref = useRef(null)
+	const [icon_width, set_icon_width] = useState(0)
+
+
+	useEffect(() => {
+		const update_size = () => {
+			if (ref.current) {
+				set_icon_width(ref.current.offsetWidth)
+			}
+		}
+
+		/* on mount setup resize observer */
+		const resize_observer = new ResizeObserver(update_size)
+		if (ref.current) {
+			resize_observer.observe(ref.current)
+		}
+
+		/* unmount remove observer */
+		return () => {
+			if (ref.current) {
+				resize_observer.unobserve(ref.current)
+			}
+			resize_observer.disconnect()
+		}
+	}, [])
+
+	const scale_factor = icon_width
+	const compute_font_size_multiplier = (num_digits) => {
+		return num_digits <= 2 ? 0.15 : 0.35 / num_digits
 	}
-
-	return (
-		<div style={container_style}>
-			<Card img_url={cardback_url}/>
-			<Card img_url={cardback_url}/>
-			<Card img_url={cardback_url}/>
-		</div>
-	)
-}
-
-
-const PlayerIcon = ({ width_p }) => {
+	const num_digits = health.length
+	const font_size = compute_font_size_multiplier(num_digits) * scale_factor
 
 	const container_style = {
 		border: '1px solid red',
 		overflow: 'hidden',
 		height: '100%',
 		flexShrink: 0,
-		aspectRatio: 1
+		aspectRatio: 1,
+		position: 'relative',
 	}
 
 	/* rounded image */
@@ -259,18 +273,46 @@ const PlayerIcon = ({ width_p }) => {
 		objectFit: 'cover',
 	}
 
+	const text_style = {
+		position: 'absolute',
+		right: '2%',
+		bottom: '2%',
+		height: '20%',
+		width: '25%',
+		backgroundColor: 'rgba(240, 240, 240, .9)',
+		borderRadius: '10%',
+    boxShadow: '0px 0px 2% rgba(0, 0, 0, .5)',
+		zIndex: 2,
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
+		outline: '1px solid rgba(240, 240, 240, 1)',
+		whiteSpace: 'nowrap',
+
+		fontFamily: 'belerin',
+		fontSize: font_size,
+		color: 'rgba(68, 68, 68, 1)',
+		fontWeight: 'bold',
+	}
+
+
 	return (
-		<div style={container_style}>
+		<div ref={ref} style={container_style}>
 			<img style={image_style} 
-				src={'https://i.pinimg.com/236x/a8/6b/07/a86b07a7a05700c97d39768c016cd6c6.jpg'}
+				src={icon_src}
 			/>
+			
+			<div style={text_style}>
+				{health}
+			</div>
+
 		</div>
 	)
 }
 
 
 
-const OpponentBoard = ({ height_p }) => {
+const OpponentBoard = ({ height_p, icon_src }) => {
 
 	const container_style = {
 		overflow: 'hidden',
@@ -297,7 +339,7 @@ const OpponentBoard = ({ height_p }) => {
 
 			<div style={{ display: 'flex', height: "30%", flexDirection: 'row' }}>
 				<Row height_p={"100%"}/>
-				<PlayerIcon />
+				<PlayerIcon icon_src={icon_src}/>
 				<Row height_p={"100%"}/>
 			</div>
 
@@ -307,6 +349,28 @@ const OpponentBoard = ({ height_p }) => {
 	)
 
 }
+
+
+const LibraryGraveyardExile = ({ height_p = '100%', width_p = '100%' }) => {
+	const container_style = {
+		border: '1px solid red',
+		overflow: 'hidden',
+		width: width_p,
+		height: height_p,
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
+	}
+
+	return (
+		<div style={container_style}>
+			<Card img_url={cardback_url}/>
+			<Card img_url={cardback_url}/>
+			<Card img_url={cardback_url}/>
+		</div>
+	)
+}
+
 
 
 const Row = ({ height_p = '100%', width_p = '100%', children }) => {
@@ -342,9 +406,9 @@ const App = () => {
 	return (
 		<div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
 			<div style={{ height: '40%', display: 'flex', flexDirection: 'row' }}>
-				<OpponentBoard height_p={'100%'}/>
+				<OpponentBoard icon_src={'https://avatarfiles.alphacoders.com/370/370780.png'} height_p={'100%'}/>
 			</div>
-			<PlayerBoard height_p={'60%'}/>
+			<PlayerBoard icon_src={'https://i.pinimg.com/236x/a8/6b/07/a86b07a7a05700c97d39768c016cd6c6.jpg'} height_p={'60%'}/>
 		</div>
 	)
 }
