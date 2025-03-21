@@ -288,7 +288,6 @@ const PlayerIcon = ({ health = "20", icon_src }) => {
 		justifyContent: 'center',
 		outline: '1px solid rgba(240, 240, 240, 1)',
 		whiteSpace: 'nowrap',
-
 		fontFamily: 'belerin',
 		fontSize: font_size,
 		color: 'rgba(68, 68, 68, 1)',
@@ -387,6 +386,12 @@ const Row = ({ height_p = '100%', width_p = '100%', children }) => {
 	return (
 		<div style={container_style}>
 			<Card img_url={sire_seven}/>
+			<Card img_url={sire_seven}/>
+			<Card img_url={sire_seven}/>
+			<Card img_url={sire_seven}/>
+			<Card img_url={sire_seven}/>
+			<Card img_url={sire_seven}/>
+			<Card img_url={sire_seven}/>
 		</div>
 	)
 }
@@ -406,6 +411,7 @@ const App = () => {
 	return (
 		<div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
 			<div style={{ height: '40%', display: 'flex', flexDirection: 'row' }}>
+				<OpponentBoard icon_src={'https://avatarfiles.alphacoders.com/370/370780.png'} height_p={'100%'}/>
 				<OpponentBoard icon_src={'https://avatarfiles.alphacoders.com/370/370780.png'} height_p={'100%'}/>
 			</div>
 			<PlayerBoard icon_src={'https://i.pinimg.com/236x/a8/6b/07/a86b07a7a05700c97d39768c016cd6c6.jpg'} height_p={'60%'}/>
