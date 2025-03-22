@@ -126,13 +126,10 @@ const create_card_obj = (scryfall_card_json) => {
 }
 
 const scryfall_mana_symbol_2_tailwind = (scryfall_mana_symbol) => {
-  /* Remove the braces */
   const symbol = scryfall_mana_symbol.slice(1, -1)
   
-  /* Base classes for all mana symbols */
   let classes = "ms ms-cost"
   
-  /* Handle different types of mana symbols */
   if (/^[WUBRG]$/.test(symbol)) {
     /* Basic colored mana */
     classes += ` ms-${symbol.toLowerCase()}`
@@ -170,7 +167,6 @@ const scryfall_mana_symbol_2_tailwind = (scryfall_mana_symbol) => {
     classes += ` ms-${color1}${color2}`
   }
   
-  /* Add the shadow class for most mana symbols */
   classes += " ms-shadow"
   
   return classes
@@ -316,10 +312,12 @@ const Card = ({ card_obj }) => {
 		</div>
 	)
 
-
-
-
 }
+
+
+
+
+
 
 
 
