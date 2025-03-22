@@ -1,0 +1,1 @@
+export { PowerToughness } from './PowerToughness'
