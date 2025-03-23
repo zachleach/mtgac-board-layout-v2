@@ -57,7 +57,7 @@ export const util = {
 			
 			/* iterate over each scryfall mana cost token and produce corresponding tailwind */
 			matches.forEach(mana_cost_token => {
-				tailwinds.push(scryfall_mana_cost_token_to_tailwind_str(mana_cost_token))
+				tailwinds.push(util.andrew_gioia.scryfall_mana_cost_token_to_tailwind_str(mana_cost_token))
 			})
 
 			return tailwinds 
@@ -145,8 +145,23 @@ export const util = {
 
 			/* returns whether a card has a back side */
 			has_back: (scryfall_json) => {
-				return scryfall_json.layout === 'modal_dfc' || scryfall_json.layout === 'transform'
+				return scryfall_json.layout === 'modal_dfc' || scryfall_json.layout === 'transform' || scryfall_json.layout === 'reversible_card'
 			},
+
+			has_multiple_casting_costs: (scryfall_json) => {
+				if (scryfall_json.card_faces === undefined) {
+					return false
+				}
+			},
+
+			/* returns { front: expr, back: expr } */
+			parse_mana_cost_expr: (scryfall_json) => {
+				if (scryfall_json.card_faces) {
+					return { front: scryfall_json.card_faces[0].mana_cost, back: scryfall_json.card_faces[1].mana_cost }
+				}
+
+				return { front: scryfall_json.mana_cost }
+			}
 
 		},
 

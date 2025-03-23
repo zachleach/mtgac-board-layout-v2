@@ -1,4 +1,4 @@
-import { LibraryGraveyardExile, AbilityIconRow, PowerToughnessLoyalty, util } from '.'
+import { ManaCost, LibraryGraveyardExile, AbilityIconRow, PowerToughnessLoyalty, util } from '.'
 import { useRef, useState, useEffect } from 'react'
 
 
@@ -9,7 +9,7 @@ import { useRef, useState, useEffect } from 'react'
  *
  *
  */
-export const Card = ({ scryfall_json, in_hand=false }) => {
+export const Card = ({ scryfall_json, in_hand=true }) => {
 
 	const [face, set_face] = useState('front')
 
@@ -52,17 +52,38 @@ export const Card = ({ scryfall_json, in_hand=false }) => {
 	}
 
 	const card_image_style = {
+		aspectRatio: 745 / 1040,
 		height: '100%',
 		width: '100%',
 		borderRadius: '3.5%',
-		objectFit: 'cover',
+		objectFit: 'fill',
+		display: 'block',
 	}
 
 
 	if (in_hand) {
+
+		const mana_cost_positioning = {
+			position: 'absolute',
+			right: '-2.5%',
+			top: '-10%',
+			height: 'auto',
+			width: 'auto',
+			boxShadow: '0px 0px 5% rgba(0, 0, 0, 1)',
+		}
+
 		return (
-			<>
-			</>
+			<div ref={ref} style={card_container_style}>
+				{/* card image */}
+				<img style={card_image_style} 
+					src={util.scryfall.json.parse_img_url(scryfall_json, face)} 
+				/>
+
+				{/* mana cost for in hand cards */}
+				<div style={mana_cost_positioning}>
+					<ManaCost scryfall_json={scryfall_json} scale_factor={card_width} face={face} />
+				</div>
+			</div>
 		)
 	}
 
