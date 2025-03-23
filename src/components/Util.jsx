@@ -104,12 +104,14 @@ export const util = {
 
 			/* returns the ability keywords from the front of the card unless face !== "front", in which case it parses the ability keywords from the back */
 			parse_ability_keywords: (scryfall_json, face="front") => { 
-				/* keywords exist at the root of a card regardless of sidedness */
-				const base_keywords = scryfall_json.keywords
+				/* only consider keywords that will be rendered */
+				const ability_keywords = [ 'Menace', 'Lifelink', 'Reach', 'Vigilance', 'First strike', 'Double strike', 'Trample', 'Ward', 'Deathtouch', 'Defender', 'Indestructable', 'Flying', 'Hexproof', 'Haste', 'Tap' ]
+				const base_keywords = scryfall_json.keywords.filter(keyword => ability_keywords.includes(keyword))
 
 				/* DOUBLE SIDED */
 				if (util.scryfall.json.has_back(scryfall_json)) {
 					const index = (face === "front" ? 0 : 1)
+					console.log('index', index)
 					
 					/* search oracle text for face specific keywords */
 					const face_specific_keywords = []
@@ -126,6 +128,8 @@ export const util = {
 							face_specific_keywords.push('Tap')
 						}
 					}
+
+					return face_specific_keywords
 				}
 
 				/* SINGLE SIDED */
@@ -142,7 +146,8 @@ export const util = {
 			/* returns whether a card has a back side */
 			has_back: (scryfall_json) => {
 				return scryfall_json.layout === 'modal_dfc' || scryfall_json.layout === 'transform'
-			}
+			},
+
 		},
 
 		/* TODO */

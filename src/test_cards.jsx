@@ -1,3 +1,161 @@
+export const three = {
+  "object": "card",
+  "id": "d99869b4-0bb6-444a-bdc4-5916371c9d29",
+  "oracle_id": "1d05e441-84d4-482f-95a8-7842e776cad2",
+  "multiverse_ids": [
+    571558
+  ],
+  "mtgo_id": 101934,
+  "tcgplayer_id": 277052,
+  "cardmarket_id": 665778,
+  "name": "Hellkite Overlord",
+  "lang": "en",
+  "released_at": "2022-07-08",
+  "uri": "https://api.scryfall.com/cards/d99869b4-0bb6-444a-bdc4-5916371c9d29",
+  "scryfall_uri": "https://scryfall.com/card/2x2/225/hellkite-overlord?utm_source=api",
+  "layout": "normal",
+  "highres_image": true,
+  "image_status": "highres_scan",
+  "image_uris": {
+    "small": "https://cards.scryfall.io/small/front/d/9/d99869b4-0bb6-444a-bdc4-5916371c9d29.jpg?1673148735",
+    "normal": "https://cards.scryfall.io/normal/front/d/9/d99869b4-0bb6-444a-bdc4-5916371c9d29.jpg?1673148735",
+    "large": "https://cards.scryfall.io/large/front/d/9/d99869b4-0bb6-444a-bdc4-5916371c9d29.jpg?1673148735",
+    "png": "https://cards.scryfall.io/png/front/d/9/d99869b4-0bb6-444a-bdc4-5916371c9d29.png?1673148735",
+    "art_crop": "https://cards.scryfall.io/art_crop/front/d/9/d99869b4-0bb6-444a-bdc4-5916371c9d29.jpg?1673148735",
+    "border_crop": "https://cards.scryfall.io/border_crop/front/d/9/d99869b4-0bb6-444a-bdc4-5916371c9d29.jpg?1673148735"
+  },
+  "mana_cost": "{4}{B}{R}{R}{G}",
+  "cmc": 8.0,
+  "type_line": "Creature — Dragon",
+  "oracle_text": "Flying, trample, haste\n{R}: This creature gets +1/+0 until end of turn.\n{B}{G}: Regenerate this creature.",
+  "power": "8",
+  "toughness": "8",
+  "colors": [
+    "B",
+    "G",
+    "R"
+  ],
+  "color_identity": [
+    "B",
+    "G",
+    "R"
+  ],
+  "keywords": [
+    "Flying",
+    "Haste",
+    "Trample"
+  ],
+  "all_parts": [
+    {
+      "object": "related_card",
+      "id": "bd17ee7d-dd79-4d77-8873-c44f820ca5b0",
+      "component": "combo_piece",
+      "name": "Hellkite Overlord",
+      "type_line": "Creature — Dragon",
+      "uri": "https://api.scryfall.com/cards/bd17ee7d-dd79-4d77-8873-c44f820ca5b0"
+    },
+    {
+      "object": "related_card",
+      "id": "2d5873e8-ba15-4a24-aab8-91f1f390d821",
+      "component": "combo_piece",
+      "name": "Dragon's Herald",
+      "type_line": "Creature — Goblin Shaman",
+      "uri": "https://api.scryfall.com/cards/2d5873e8-ba15-4a24-aab8-91f1f390d821"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "not_legal",
+    "timeless": "not_legal",
+    "gladiator": "not_legal",
+    "pioneer": "not_legal",
+    "explorer": "not_legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "not_legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "legal"
+  },
+  "games": [
+    "paper",
+    "mtgo"
+  ],
+  "reserved": false,
+  "game_changer": false,
+  "foil": true,
+  "nonfoil": true,
+  "finishes": [
+    "nonfoil",
+    "foil"
+  ],
+  "oversized": false,
+  "promo": false,
+  "reprint": true,
+  "variation": false,
+  "set_id": "5a645837-b050-449f-ac90-1e7ccbf45031",
+  "set": "2x2",
+  "set_name": "Double Masters 2022",
+  "set_type": "masters",
+  "set_uri": "https://api.scryfall.com/sets/5a645837-b050-449f-ac90-1e7ccbf45031",
+  "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3A2x2&unique=prints",
+  "scryfall_set_uri": "https://scryfall.com/sets/2x2?utm_source=api",
+  "rulings_uri": "https://api.scryfall.com/cards/d99869b4-0bb6-444a-bdc4-5916371c9d29/rulings",
+  "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A1d05e441-84d4-482f-95a8-7842e776cad2&unique=prints",
+  "collector_number": "225",
+  "digital": false,
+  "rarity": "mythic",
+  "flavor_text": "\"The dragon has no pretense of compassion, no false mask of civilization—just hunger, heat, and need.\"\n—Sarkhan Vol",
+  "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+  "artist": "Justin Sweet",
+  "artist_ids": [
+    "bb15780e-8f96-4823-b258-a7a9fd79b02c"
+  ],
+  "illustration_id": "a51ba40e-c746-43e7-aa00-a83d9957b65c",
+  "border_color": "black",
+  "frame": "2015",
+  "security_stamp": "oval",
+  "full_art": false,
+  "textless": false,
+  "booster": true,
+  "story_spotlight": false,
+  "edhrec_rank": 14247,
+  "penny_rank": 2884,
+  "preview": {
+    "source": "Star City Games",
+    "source_uri": "https://articles.starcitygames.com/magic-the-gathering/double-masters-2022-brings-back-mythic-rare-dragon-fan-favorite-command/",
+    "previewed_at": "2022-06-23"
+  },
+  "prices": {
+    "usd": "0.46",
+    "usd_foil": "0.61",
+    "usd_etched": null,
+    "eur": "0.71",
+    "eur_foil": "2.04",
+    "tix": "0.06"
+  },
+  "related_uris": {
+    "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=571558&printed=false",
+    "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26q%3DHellkite%2BOverlord",
+    "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26q%3DHellkite%2BOverlord",
+    "edhrec": "https://edhrec.com/route/?cc=Hellkite+Overlord"
+  },
+  "purchase_uris": {
+    "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F277052%3Fpage%3D1",
+    "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Double-Masters-2022/Hellkite-Overlord?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+    "cardhoarder": "https://www.cardhoarder.com/cards/101934?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+  }
+}
 
 export const transform = {
   "object": "card",
@@ -677,3 +835,315 @@ export const adventure = {
   }
 }
 
+
+export const adv_cr = {
+  "object": "card",
+  "id": "f890bdc7-32e6-4492-bac7-7cabf54a8bfd",
+  "oracle_id": "099b8d2c-b482-48dd-b6bc-dedf546d66c5",
+  "multiverse_ids": [],
+  "tcgplayer_id": 623887,
+  "name": "Marang River Regent // Coil and Catch",
+  "lang": "en",
+  "released_at": "2025-04-11",
+  "uri": "https://api.scryfall.com/cards/f890bdc7-32e6-4492-bac7-7cabf54a8bfd",
+  "scryfall_uri": "https://scryfall.com/card/tdm/51/marang-river-regent-coil-and-catch?utm_source=api",
+  "layout": "adventure",
+  "highres_image": false,
+  "image_status": "lowres",
+  "image_uris": {
+    "small": "https://cards.scryfall.io/small/front/f/8/f890bdc7-32e6-4492-bac7-7cabf54a8bfd.jpg?1742324657",
+    "normal": "https://cards.scryfall.io/normal/front/f/8/f890bdc7-32e6-4492-bac7-7cabf54a8bfd.jpg?1742324657",
+    "large": "https://cards.scryfall.io/large/front/f/8/f890bdc7-32e6-4492-bac7-7cabf54a8bfd.jpg?1742324657",
+    "png": "https://cards.scryfall.io/png/front/f/8/f890bdc7-32e6-4492-bac7-7cabf54a8bfd.png?1742324657",
+    "art_crop": "https://cards.scryfall.io/art_crop/front/f/8/f890bdc7-32e6-4492-bac7-7cabf54a8bfd.jpg?1742324657",
+    "border_crop": "https://cards.scryfall.io/border_crop/front/f/8/f890bdc7-32e6-4492-bac7-7cabf54a8bfd.jpg?1742324657"
+  },
+  "mana_cost": "{4}{U}{U} // {3}{U}",
+  "cmc": 6.0,
+  "type_line": "Creature — Dragon // Instant — Omen",
+  "power": "6",
+  "toughness": "7",
+  "colors": [
+    "U"
+  ],
+  "color_identity": [
+    "U"
+  ],
+  "keywords": [
+    "Flying"
+  ],
+  "card_faces": [
+    {
+      "object": "card_face",
+      "name": "Marang River Regent",
+      "mana_cost": "{4}{U}{U}",
+      "type_line": "Creature — Dragon",
+      "oracle_text": "Flying\nWhen this creature enters, return up to two other target nonland permanents to their owners' hands.",
+      "power": "6",
+      "toughness": "7",
+      "artist": "John Tedrick",
+      "artist_id": "4da667fd-a4ad-4aea-ba20-db542810e01b",
+      "illustration_id": "fbf61d3f-f98e-4dae-a3ed-b361a8bc625f"
+    },
+    {
+      "object": "card_face",
+      "name": "Coil and Catch",
+      "mana_cost": "{3}{U}",
+      "type_line": "Instant — Omen",
+      "oracle_text": "Draw three cards, then discard a card. (Then shuffle this card into its owner's library.)",
+      "artist": "John Tedrick",
+      "artist_id": "4da667fd-a4ad-4aea-ba20-db542810e01b"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "not_legal",
+    "timeless": "not_legal",
+    "gladiator": "not_legal",
+    "pioneer": "not_legal",
+    "explorer": "not_legal",
+    "modern": "not_legal",
+    "legacy": "not_legal",
+    "pauper": "not_legal",
+    "vintage": "not_legal",
+    "penny": "not_legal",
+    "commander": "not_legal",
+    "oathbreaker": "not_legal",
+    "standardbrawl": "not_legal",
+    "brawl": "not_legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "not_legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal"
+  },
+  "games": [
+    "paper",
+    "arena",
+    "mtgo"
+  ],
+  "reserved": false,
+  "game_changer": false,
+  "foil": true,
+  "nonfoil": true,
+  "finishes": [
+    "nonfoil",
+    "foil"
+  ],
+  "oversized": false,
+  "promo": false,
+  "reprint": false,
+  "variation": false,
+  "set_id": "1361ca81-1304-49a8-b2e6-e76a4aa4a8c3",
+  "set": "tdm",
+  "set_name": "Tarkir: Dragonstorm",
+  "set_type": "expansion",
+  "set_uri": "https://api.scryfall.com/sets/1361ca81-1304-49a8-b2e6-e76a4aa4a8c3",
+  "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Atdm&unique=prints",
+  "scryfall_set_uri": "https://scryfall.com/sets/tdm?utm_source=api",
+  "rulings_uri": "https://api.scryfall.com/cards/f890bdc7-32e6-4492-bac7-7cabf54a8bfd/rulings",
+  "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A099b8d2c-b482-48dd-b6bc-dedf546d66c5&unique=prints",
+  "collector_number": "51",
+  "digital": false,
+  "rarity": "rare",
+  "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+  "artist": "John Tedrick",
+  "artist_ids": [
+    "4da667fd-a4ad-4aea-ba20-db542810e01b"
+  ],
+  "illustration_id": "fbf61d3f-f98e-4dae-a3ed-b361a8bc625f",
+  "border_color": "black",
+  "frame": "2015",
+  "security_stamp": "oval",
+  "full_art": false,
+  "textless": false,
+  "booster": false,
+  "story_spotlight": false,
+  "edhrec_rank": 25509,
+  "prices": {
+    "usd": null,
+    "usd_foil": "6.65",
+    "usd_etched": null,
+    "eur": null,
+    "eur_foil": null,
+    "tix": null
+  },
+  "related_uris": {
+    "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26q%3DMarang%2BRiver%2BRegent%2B%252F%252F%2BCoil%2Band%2BCatch",
+    "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26q%3DMarang%2BRiver%2BRegent%2B%252F%252F%2BCoil%2Band%2BCatch",
+    "edhrec": "https://edhrec.com/route/?cc=Marang+River+Regent"
+  },
+  "purchase_uris": {
+    "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F623887%3Fpage%3D1",
+    "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Marang+River+Regent&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+    "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Marang+River+Regent&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+  }
+}
+
+export const dfc_cr_cr = {
+  "object": "card",
+  "id": "75cf4eb8-33e7-4dfc-b890-a7e3b5c1b9d5",
+  "oracle_id": "3b102ccc-7629-457c-aba6-e9b00fd50c85",
+  "multiverse_ids": [],
+  "tcgplayer_id": 618861,
+  "name": "Emet-Selch, Unsundered // Hades, Sorcerer of Eld",
+  "lang": "en",
+  "released_at": "2025-06-13",
+  "uri": "https://api.scryfall.com/cards/75cf4eb8-33e7-4dfc-b890-a7e3b5c1b9d5",
+  "scryfall_uri": "https://scryfall.com/card/fin/218/emet-selch-unsundered-hades-sorcerer-of-eld?utm_source=api",
+  "layout": "transform",
+  "highres_image": true,
+  "image_status": "highres_scan",
+  "cmc": 3.0,
+  "type_line": "Legendary Creature — Elder Wizard // Legendary Creature — Avatar",
+  "color_identity": [
+    "B",
+    "U"
+  ],
+  "keywords": [
+    "Vigilance",
+    "Echo of the Lost",
+    "Transform"
+  ],
+  "card_faces": [
+    {
+      "object": "card_face",
+      "name": "Emet-Selch, Unsundered",
+      "mana_cost": "{1}{U}{B}",
+      "type_line": "Legendary Creature — Elder Wizard",
+      "oracle_text": "Vigilance\nWhenever Emet-Selch enters or attacks, draw a card, then discard a card.\nAt the beginning of your upkeep, if there are fourteen or more cards in your graveyard, you may transform Emet-Selch.",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "power": "2",
+      "toughness": "4",
+      "artist": "Néstor Ossandón Leal",
+      "artist_id": "7a6f1667-a8ac-47f5-a302-f71cb54b2adf",
+      "illustration_id": "45d1c55f-171a-409c-8841-46f6f24d5684",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/front/7/5/75cf4eb8-33e7-4dfc-b890-a7e3b5c1b9d5.jpg?1739885349",
+        "normal": "https://cards.scryfall.io/normal/front/7/5/75cf4eb8-33e7-4dfc-b890-a7e3b5c1b9d5.jpg?1739885349",
+        "large": "https://cards.scryfall.io/large/front/7/5/75cf4eb8-33e7-4dfc-b890-a7e3b5c1b9d5.jpg?1739885349",
+        "png": "https://cards.scryfall.io/png/front/7/5/75cf4eb8-33e7-4dfc-b890-a7e3b5c1b9d5.png?1739885349",
+        "art_crop": "https://cards.scryfall.io/art_crop/front/7/5/75cf4eb8-33e7-4dfc-b890-a7e3b5c1b9d5.jpg?1739885349",
+        "border_crop": "https://cards.scryfall.io/border_crop/front/7/5/75cf4eb8-33e7-4dfc-b890-a7e3b5c1b9d5.jpg?1739885349"
+      }
+    },
+    {
+      "object": "card_face",
+      "name": "Hades, Sorcerer of Eld",
+      "mana_cost": "",
+      "type_line": "Legendary Creature — Avatar",
+      "oracle_text": "Vigilance\nEcho of the Lost — During your turn, you may play cards from your graveyard.\nIf a card or token would be put into your graveyard from anywhere, exile it instead.",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_indicator": [
+        "B",
+        "U"
+      ],
+      "power": "6",
+      "toughness": "6",
+      "flavor_text": "\"What will become of our triumphs? Our hopes? Our... our despair?\"",
+      "artist": "Néstor Ossandón Leal",
+      "artist_id": "7a6f1667-a8ac-47f5-a302-f71cb54b2adf",
+      "illustration_id": "f04db53e-ab7f-48ad-bf3a-87eacb7de57e",
+      "image_uris": {
+        "small": "https://cards.scryfall.io/small/back/7/5/75cf4eb8-33e7-4dfc-b890-a7e3b5c1b9d5.jpg?1739885349",
+        "normal": "https://cards.scryfall.io/normal/back/7/5/75cf4eb8-33e7-4dfc-b890-a7e3b5c1b9d5.jpg?1739885349",
+        "large": "https://cards.scryfall.io/large/back/7/5/75cf4eb8-33e7-4dfc-b890-a7e3b5c1b9d5.jpg?1739885349",
+        "png": "https://cards.scryfall.io/png/back/7/5/75cf4eb8-33e7-4dfc-b890-a7e3b5c1b9d5.png?1739885349",
+        "art_crop": "https://cards.scryfall.io/art_crop/back/7/5/75cf4eb8-33e7-4dfc-b890-a7e3b5c1b9d5.jpg?1739885349",
+        "border_crop": "https://cards.scryfall.io/border_crop/back/7/5/75cf4eb8-33e7-4dfc-b890-a7e3b5c1b9d5.jpg?1739885349"
+      }
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "not_legal",
+    "timeless": "not_legal",
+    "gladiator": "not_legal",
+    "pioneer": "not_legal",
+    "explorer": "not_legal",
+    "modern": "not_legal",
+    "legacy": "not_legal",
+    "pauper": "not_legal",
+    "vintage": "not_legal",
+    "penny": "not_legal",
+    "commander": "not_legal",
+    "oathbreaker": "not_legal",
+    "standardbrawl": "not_legal",
+    "brawl": "not_legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "not_legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal"
+  },
+  "games": [
+    "paper"
+  ],
+  "reserved": false,
+  "game_changer": false,
+  "foil": true,
+  "nonfoil": true,
+  "finishes": [
+    "nonfoil",
+    "foil"
+  ],
+  "oversized": false,
+  "promo": false,
+  "reprint": false,
+  "variation": false,
+  "set_id": "d7beb4b7-e1ff-4d35-ab07-5700f17ea1ea",
+  "set": "fin",
+  "set_name": "Final Fantasy",
+  "set_type": "expansion",
+  "set_uri": "https://api.scryfall.com/sets/d7beb4b7-e1ff-4d35-ab07-5700f17ea1ea",
+  "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Afin&unique=prints",
+  "scryfall_set_uri": "https://scryfall.com/sets/fin?utm_source=api",
+  "rulings_uri": "https://api.scryfall.com/cards/75cf4eb8-33e7-4dfc-b890-a7e3b5c1b9d5/rulings",
+  "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A3b102ccc-7629-457c-aba6-e9b00fd50c85&unique=prints",
+  "collector_number": "218",
+  "digital": false,
+  "rarity": "mythic",
+  "artist": "Néstor Ossandón Leal",
+  "artist_ids": [
+    "7a6f1667-a8ac-47f5-a302-f71cb54b2adf"
+  ],
+  "border_color": "black",
+  "frame": "2015",
+  "frame_effects": [
+    "legendary"
+  ],
+  "security_stamp": "triangle",
+  "full_art": false,
+  "textless": false,
+  "booster": false,
+  "story_spotlight": false,
+  "edhrec_rank": 20851,
+  "prices": {
+    "usd": "66.67",
+    "usd_foil": "74.92",
+    "usd_etched": null,
+    "eur": null,
+    "eur_foil": null,
+    "tix": null
+  },
+  "related_uris": {
+    "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26q%3DEmet-Selch%252C%2BUnsundered%2B%252F%252F%2BHades%252C%2BSorcerer%2Bof%2BEld",
+    "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26q%3DEmet-Selch%252C%2BUnsundered%2B%252F%252F%2BHades%252C%2BSorcerer%2Bof%2BEld",
+    "edhrec": "https://edhrec.com/route/?cc=Emet-Selch%2C+Unsundered"
+  },
+  "purchase_uris": {
+    "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F618861%3Fpage%3D1",
+    "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Emet-Selch%2C+Unsundered&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+    "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Emet-Selch%2C+Unsundered&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+  }
+}
