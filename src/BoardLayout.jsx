@@ -596,8 +596,6 @@ const Row = ({ height_p = '100%', width_p = '100%', card_arr }) => {
 
 const App = () => {
 
-	const card_obj = create_card_obj(adventure)
-
 	const belerin_font = new FontFace('belerin', 'url(mplantin.woff)')
 	belerin_font.load().then((font) => {
 		document.fonts.add(font)

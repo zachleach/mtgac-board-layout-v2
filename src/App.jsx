@@ -1,7 +1,7 @@
 import './App.css'
 import 'mana-font/css/mana.css'
 import { sol_ring, dfc_cr_cr, adv_cr, transform, dfc, adventure, seven, three } from './test_cards'
-import { Card } from './components'
+import { Card, PlayerBoard, OpponentBoard } from './components'
 
 
 
@@ -16,12 +16,13 @@ const App = () => {
 	})
 
 	return (
-		<div style={{ height: '100vh', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
-			<Card scryfall_json={adv_cr} />
-			<Card scryfall_json={seven} />
-			<Card scryfall_json={dfc_cr_cr} />
-			<Card scryfall_json={three} />
-			<Card scryfall_json={sol_ring} />
+		<div style={{ height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+			<div style={{ height: '40%', width: '100%', display: 'flex', flexDirection: 'row' }}>
+				<OpponentBoard/>
+			</div>
+			<div style={{ height: '60%', width: '100%', display: 'flex', flexDirection: 'row' }}>
+				<PlayerBoard />
+			</div>
 		</div>
 	)
 }

@@ -1,15 +1,7 @@
 import { ManaCost, LibraryGraveyardExile, AbilityIconRow, PowerToughnessLoyalty, util } from '.'
 import { useRef, useState, useEffect } from 'react'
 
-
-/**
- * TODO: 
- * refactor power, toughness, mana symbols, and abilitiy icons to be pulled from scryfall data (combine props into a card_info object prop)
- * refactor mana symbols to only be displayed when card is in-hand
- *
- *
- */
-export const Card = ({ scryfall_json, in_hand=true }) => {
+export const Card = ({ scryfall_json, in_hand }) => {
 
 	const [face, set_face] = useState('front')
 
@@ -49,6 +41,7 @@ export const Card = ({ scryfall_json, in_hand=true }) => {
 		flex: '0 1 auto',
 		margin: '0.25%',
 		position: 'relative',
+		zIndex: '10',
 	}
 
 	const card_image_style = {
@@ -62,7 +55,6 @@ export const Card = ({ scryfall_json, in_hand=true }) => {
 
 
 	if (in_hand) {
-
 		const mana_cost_positioning = {
 			position: 'absolute',
 			right: '-2.5%',

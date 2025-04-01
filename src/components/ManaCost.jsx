@@ -38,13 +38,12 @@ export const ManaCost = ({ scryfall_json, scale_factor, face="front" }) => {
 
 	const container_style = {
 		display: 'flex',
-		justifyContent: 'flex-end', /* expand left, not right */
+		justifyContent: 'flex-end',			/* expand left, not right */
 		gap: `${scale_factor / 32}px`
 	}
 
 	const mana_cost_style = {
 		display: 'flex',
-		border: '1px solid blue',
 		height: 'auto',
 		width: 'auto',
 		alignItems: 'center', 
@@ -55,8 +54,6 @@ export const ManaCost = ({ scryfall_json, scale_factor, face="front" }) => {
 	const { front, back } = util.scryfall.json.parse_mana_cost_expr(scryfall_json)
 	const front_mana_cost_tailwind_str_arr = front ? util.andrew_gioia.scryfall_mana_cost_expr_to_tailwind_str_arr(front) : []
 	const back_mana_cost_tailwind_str_arr = back ? util.andrew_gioia.scryfall_mana_cost_expr_to_tailwind_str_arr(back) : []
-
-	console.log(face)
 
 	if (face !== 'front') {
 		return (
