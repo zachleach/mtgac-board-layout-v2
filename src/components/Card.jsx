@@ -32,7 +32,6 @@ export const Card = ({ scryfall_json, in_hand }) => {
 
 	}, [])
 
-
 	const card_container_style = {
 		aspectRatio: 745 / 1040,
 		border: '1px solid red',
@@ -52,7 +51,6 @@ export const Card = ({ scryfall_json, in_hand }) => {
 		objectFit: 'fill',
 		display: 'block',
 	}
-
 
 	if (in_hand) {
 		const mana_cost_positioning = {

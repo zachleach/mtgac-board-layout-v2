@@ -7,6 +7,9 @@ const ManaIcon = ({ tailwind, scale_factor }) => {
 	const container_style = {
 		fontSize: size,
 		margin: '0 1px',
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center'
 	}
 
 	return (
