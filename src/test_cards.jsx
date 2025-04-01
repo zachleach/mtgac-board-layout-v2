@@ -1,3 +1,5 @@
+export const card_back = "https://static.wikia.nocookie.net/mtgsalvation_gamepedia/images/f/f8/Magic_card_back.jpg/revision/latest?cb=20140813141013"
+
 export const sol_ring = {
   "object": "card",
   "id": "d74a72a2-d46a-41c2-a400-70571197b020",

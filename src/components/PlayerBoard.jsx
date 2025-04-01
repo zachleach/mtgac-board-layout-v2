@@ -47,17 +47,8 @@ export const PlayerBoard = ({ board_state }) => {
 				<Row height_p={"100%"} row_state={board_state.right_row} />
 			</div>
 
-			<div style={{ display: 'flex', height: "33.3%", flexDirection: 'row' }}>
-				{/* library, graveyard, exile */}
-				<LibraryGraveyardExile width_p={'30%'}/>
-
-				{/* hand row */}
-				<Row width_p={"60%"} row_state={board_state.hand_row} />
-
-				{/* stack */}
-				<div style={{ width: '30%', border: '1px solid red'}}>
-					Spell Stack
-				</div>
+			<div style={{ display: 'flex', width: '100%', height: "33.3%", flexDirection: 'row' }}>
+				<Row width_p={"100%"} row_state={board_state.hand_row} />
 			</div>
 
 

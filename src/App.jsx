@@ -17,7 +17,9 @@ const App = () => {
 
 	return (
 		<div style={{ height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-			<div style={{ height: '40%', width: '100%', display: 'flex', flexDirection: 'row' }}>
+			<div style={{ height: '40%', width: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+				<OpponentBoard/>
+				<OpponentBoard/>
 				<OpponentBoard/>
 			</div>
 			<div style={{ height: '60%', width: '100%', display: 'flex', flexDirection: 'row' }}>

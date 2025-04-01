@@ -1,13 +1,15 @@
 import { ManaCost, LibraryGraveyardExile, AbilityIconRow, PowerToughnessLoyalty, util } from '.'
 import { useRef, useState, useEffect } from 'react'
 
-export const Card = ({ scryfall_json, in_hand }) => {
+export const Card = ({ scryfall_json, in_hand, is_facedown=false }) => {
 
 	const [face, set_face] = useState('front')
 
 	/* keep track of card width in pixels for child components that need it as a scale factor */
 	const ref = useRef(null)
 	const [card_width, set_card_width] = useState(0)
+
+	const img_url = is_facedown ? './card_back.jpg' : util.scryfall.json.parse_img_url(scryfall_json, face)
 
 	useEffect(() => {
 		const update_size = () => {
@@ -52,6 +54,7 @@ export const Card = ({ scryfall_json, in_hand }) => {
 		display: 'block',
 	}
 
+
 	if (in_hand) {
 		const mana_cost_positioning = {
 			position: 'absolute',
@@ -66,17 +69,18 @@ export const Card = ({ scryfall_json, in_hand }) => {
 			<div ref={ref} style={card_container_style}>
 				{/* card image */}
 				<img style={card_image_style} 
-					src={util.scryfall.json.parse_img_url(scryfall_json, face)} 
+					src={img_url} 
 				/>
 
-				{/* mana cost for in hand cards */}
-				<div style={mana_cost_positioning}>
-					<ManaCost scryfall_json={scryfall_json} scale_factor={card_width} face={face} />
-				</div>
+				{/* mana cost for in-hand cards if not facedown */}
+				{is_facedown === false &&
+					<div style={mana_cost_positioning}>
+						<ManaCost scryfall_json={scryfall_json} scale_factor={card_width} face={face} />
+					</div>
+				}
 			</div>
 		)
 	}
-
 	else {
 
 		/* flex row for rendering an array of growing/shrinking icons */
@@ -96,11 +100,12 @@ export const Card = ({ scryfall_json, in_hand }) => {
 			height: '12%',
 		}
 
+
 		return (
 			<div ref={ref} style={card_container_style}>
 				{/* card image */}
 				<img style={card_image_style} 
-					src={util.scryfall.json.parse_img_url(scryfall_json, face)} 
+					src={img_url} 
 				/>
 
 				{/* ability icons */}

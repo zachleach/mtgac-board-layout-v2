@@ -80,7 +80,7 @@ export const ManaCost = ({ scryfall_json, scale_factor, face="front" }) => {
 					</div>
 					<div style={mana_cost_style}>
 						{back_mana_cost_tailwind_str_arr.map((tailwind_str, index) => (
-								<ManaIcon tailwind={tailwind_str} scale_factor={scale_factor} />
+								<ManaIcon key={index} tailwind={tailwind_str} scale_factor={scale_factor} />
 						))}
 					</div>
 				</>
